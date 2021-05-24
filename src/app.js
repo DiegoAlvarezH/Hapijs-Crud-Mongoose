@@ -1,5 +1,9 @@
 const Hapi = require('@hapi/hapi');
 
+require('./database');
+//model data save for search, delete...
+const Task = require('./models/Task')
+
 const init = async () => {
     const server = new Hapi.Server({
         port: 3000,
@@ -10,6 +14,7 @@ const init = async () => {
         method: 'POST',
         path: '/tasks',
         handler: (request, h) => {
+            console.log(request.payload);
             return 'hello world'
         }
     })

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 require('./database')
 
-mongoose.connect('mongodb://localhost/testhapi', {
+mongoose.connect('mongodb://localhost/testdb', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
